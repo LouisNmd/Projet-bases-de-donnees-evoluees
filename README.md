@@ -6,4 +6,24 @@
 ![Schéma en flocon](/flocon.jpg)
 
 Deux dimensions (PAYS et ECONOMIE) ainsi qu'une table des faits sont représentées dans ce schéma.  
-La dimension PAYS représente un pays grâce à son nom (nom_pays, chaine de caractère et clé primaire) et grâce à sa position géographique dans le monde (region_geographique, chaîne de caractère) 
+
+- PAYS  
+nom_pays (chaîne de caractère) : Nom du pays en toute lettre.  
+region_geographique (chaîne de caractère) : Région géographique du pays concerné, en toute lettre.
+
+- ECONOMIE  
+id_economie (entier) : clé primaire necessaire pour différencier les différents tuples.  
+PIB_par_hab (flottant) : le PIB/habitant.  
+IDH (flottant) : valeur numérique comprise entre 0 et 1 qui représente l'IDH.  
+
+- FAIT  
+classement_mondial_bonheur (entier) : la position du pays de la population étudiée au classement mondial sur l'échelle du bonheur.  
+note_bonheur (flottant) : valeur numérique comprise entre 0 et 10 qui représente le niveau de bonheur d'un pays selon ses habitants.  
+genre (binaire) : Le genre de la population étudiée.    
+nombre_population (entier) : taille de la population étudiée.  
+tranche_age (chaîne de caractère) : tranche d'âge de la population étudiée.  
+nombre_suicide (entier) : nombre de suicide dans l'année pour la population étudiée.
+taux_suicide (flottant) : nombre de suicide pour 100k habitants pour la population étudiée.  
+annee (entier) : année concernée par les données.   
+
+
