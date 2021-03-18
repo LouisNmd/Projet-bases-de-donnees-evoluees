@@ -30,12 +30,12 @@ Deux dimensions (PAYS et ECONOMIE) ainsi qu'une table des faits sont représent�
 
 - Group By  
 ```sql
-SELECT ANNEE, NOM_PAYS, SUM(POPULATION) AS POPULATION_TOTALE  
-FROM FAITS  
-GROUP BY ANNEE, NOM_PAYS  
-ORDER BY NOM_PAYS;  
+SELECT ANNEE, NOM_PAYS, SUM(POPULATION) AS POPULATION_TOTALE, GROUPING(ANNEE) AS GRP
+FROM FAITS
+GROUP BY ROLLUP (ANNEE, NOM_PAYS)
+ORDER BY NOM_PAYS;
 ```  
-Calcule la population totale de chaque pays par année, et retourne le résultat par ordre alphabétique des pays.
-
-
-
+Calcule la population totale sur 3 niveaux d'aggrégats différent :
+La population totale de chaque pays par année (2015 et 2016). *utile à des fins d'analyse démographiques pour chaque pays*  
+La population totale répertoriée dans la base de donnée pour l'année 2015 et pour l'année 2016. *utile pour connaitre le % de la population mondiale répertoriée dnasl a base de donnée et utile à des fins statistiques sur les données des suicides*  
+La somme de la population totale des années 2015 et 2016. *utile à des fins statistiques sur les données des suicides*  
