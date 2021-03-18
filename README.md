@@ -35,12 +35,13 @@ FROM FAITS
 GROUP BY ROLLUP (ANNEE, NOM_PAYS)
 ORDER BY NOM_PAYS;
 ```  
-Calcule la population totale sur 3 niveaux d'aggrégats différent :  
-La population totale de chaque pays par année (2015 et 2016).  
-*utile à des fins d'analyse démographiques pour chaque pays*  
+Calcule la population totale sur 3 niveaux d'aggrégats différent : 
   
-La population totale répertoriée dans la base de donnée pour l'année 2015 et pour l'année 2016.  
-*utile pour connaitre le % de la population mondiale répertoriée dnasl a base de donnée et utile à des fins statistiques sur les données des suicides* 
+-La population totale de chaque pays par année (2015 et 2016).  
+*Utile à des fins d'analyse démographiques pour chaque pays*  
   
-La somme de la population totale des années 2015 et 2016.  
-*utile à des fins statistiques sur les données des suicides*  
+-La population totale répertoriée dans la base de donnée pour l'année 2015 et pour l'année 2016.  
+*Utile pour connaitre le % de la population mondiale répertoriée dans la base de donnée et utile à des fins statistiques sur les données des suicides* 
+  
+-La somme de la population totale des années 2015 et 2016.  
+*Utile à des fins statistiques sur les données des suicides*  
