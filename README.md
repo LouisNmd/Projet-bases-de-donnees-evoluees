@@ -24,6 +24,10 @@ Deux dimensions (PAYS et ECONOMIE) ainsi qu'une table des faits sont représent�
 **tranche_age** (chaîne de caractère) : tranche d'âge de la population étudiée.  
 **nombre_suicide** (entier) : nombre de suicide dans l'année pour la population étudiée.  
 **taux_suicide** (flottant) : nombre de suicide pour 100k habitants pour la population étudiée.  
-**annee** (entier) : année concernée par les données.   
+**annee** (entier) : année concernée par les données.
+
+#### *liste des requêtes* ####
+
+- Group By
 
 
