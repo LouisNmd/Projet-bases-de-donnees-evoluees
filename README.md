@@ -28,13 +28,13 @@ Deux dimensions (PAYS et ECONOMIE) ainsi qu'une table des faits sont représent�
 
 #### *liste des requêtes* ####
 
-- Group By
+- Group By  
 `
-SELECT ANNEE, NOM_PAYS, SUM(POPULATION) AS POPULATION_TOTALE
-FROM FAITS
-GROUP BY ANNEE, NOM_PAYS
-ORDER BY NOM_PAYS;
-`
+SELECT ANNEE, NOM_PAYS, SUM(POPULATION) AS POPULATION_TOTALE  
+FROM FAITS  
+GROUP BY ANNEE, NOM_PAYS  
+ORDER BY NOM_PAYS;  
+`  
 Calcule la population totale de chaque pays par année, et retourne le résultat par ordre alphabétique des pays.
 
 
