@@ -28,7 +28,7 @@ Deux dimensions (PAYS et ECONOMIE) ainsi qu'une table des faits sont représent�
 
 #### *liste des requêtes* ####
 
-- Group By  
+- Group By Rollup  
 ```sql
 SELECT ANNEE, NOM_PAYS, SUM(POPULATION) AS POPULATION_TOTALE, GROUPING(ANNEE) AS GRP
 FROM FAITS
