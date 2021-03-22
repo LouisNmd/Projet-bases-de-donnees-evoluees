@@ -3,7 +3,7 @@
 
 #### *Schéma en étoile de l'entrepôt de données* ####
 
-![Schéma en flocon](/flocon.jpg)
+![Schéma en flocon](flocon.jpg)
 
 Deux dimensions (PAYS et ECONOMIE) ainsi qu'une table des faits sont représentées dans ce schéma.  
 
@@ -54,7 +54,7 @@ Les multiples instructions énoncées ci-dessus permettent de reproduire l'entre
 
 #### *liste des requêtes* ####
 
-- Group By  
+- Group By Rollup  
 ```sql
 SELECT ANNEE, NOM_PAYS, SUM(POPULATION) AS POPULATION_TOTALE, GROUPING(ANNEE) AS GRP
 FROM FAITS
