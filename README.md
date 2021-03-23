@@ -25,6 +25,32 @@ Deux dimensions (PAYS et ECONOMIE) ainsi qu'une table des faits sont représent�
 **nombre_suicide** (entier) : nombre de suicide dans l'année pour la population étudiée.  
 **taux_suicide** (flottant) : nombre de suicide pour 100k habitants pour la population étudiée.  
 **annee** (entier) : année concernée par les données.
+  
+#### *Mise en oeuvre de l'entrepôt* ####
+
+L'entrepôt de données a été implémenté en utilisant le logiciel SQLDeveloper. Seule les données concernant les années 2015 et 2016 nous intéressent.   
+L'entrepôt repose sur le schéma en étoile présenté ci-dessus : il est nécessaire de respecter les différentes organisations des tables ainsi que les différents types primitifs utilisés dans le schéma.
+
+- <u>Sources</u>
+  - [1] https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016  
+    Ensemble de données qui regroupe des statistiques sur les suicides par pays, ainsi que les données économiques (PIB par habitant et IDH) de ces pays.
+
+  - [2] https://www.kaggle.com/unsdsn/world-happiness  
+    Ensemble de données qui regroupent des statistiques sur le bonheur des pays.
+
+- <u>Intégration & nettoyage des données</u>  
+  Le processus d'intégration est différent pour les 4 tables de l'entrepôt de données.
+  - La table **PAYS**  
+    La table **PAYS** est relativement aisée à remplir : il suffit d'importer les données des colonnes *Region* (renommée en **Region**) et *Country* (renommée en **NOM_PAYS**) de l'ensemble [2].
+  - La table **ECONOMIE**  
+    La table **ECONOMIE** est tout aussi facile à remplir : il suffit d'importer les données des colonnes *GDP_PER_CAPITA* (renommée en **PIB_PAR_HABITANT**), *HDI for year* (renommée en **IDH**), *country* (renommée en **NOM_PAYS**) et *year* (renommée en **ANNEE**) de l'ensemble [1].
+  - La table **BONHEUR**  
+    La table **BONHEUR**, bien que facile à remplir, nécessite une légère manipulation : il suffit d'importer les colonnes *Country* (renommée en **NOM_PAYS**), *Happiness Rank* (renommée en **CLASSEMENT_MONDIAL_BONHEUR**) et *Happiness Score* (renommée en **NOTE_BONHEUR**) de l'ensemble [2].
+    La colonne **ANNEE** est remplie en fonction du fichier source : il existe plusieurs fichiers .csv dans l'ensemble de données sources, dont 2015.csv et 2016.csv qui nous intéressent. Il suffit ensuite de remplir tout les ```INSERT``` générés avec la bonne année (à l'aide d'un CTRL+F couplé d'un 'Test to Search For' et 'Replace With'), puis les exécuter.
+  - La table **FAITS** est la dernière table de l'entrepôt de données. Une petite manipulation est nécessaire pour remplir la table : il suffit d'importer les colonnes *country* (renommée en **NOM_PAYS**), *age* (renommée en **TRANCHE_AGE**), *year* (renommée en **ANNEE**), *sex* (renommée en **GENRE**), *suicides_no* (renommée en **NOMBRE_SUICIDE**), *suicides/100k pop* (renommée en **TAUX_SUICIDE**) et *population* (renommée en **POPULATION**).
+    Il est nécessaire de procéder à un *bitmapping* pour la colonne **GENRE** à l'aide du même procédé utilisé pour modifier les requêtes ````INSERT```` : il faut remplacer toutes les occurrences de "female" par 0 et toutes les occurrences de "male" par 1.
+
+Les multiples instructions énoncées ci-dessus permettent de reproduire l'entrepôt de données du projet.
 
 #### *liste des requêtes* ####
 - Group By
@@ -38,23 +64,23 @@ Affiche les pays avec les taux de suicide (pour 100 000 habitants) les plus éle
 Cela donne un ordre de grandeur pour la suite des calculs.
 
 
-- Group By Rollup 
+- Group By Rollup
 ```sql
 SELECT ANNEE, NOM_PAYS, SUM(POPULATION) AS POPULATION_TOTALE, GROUPING(ANNEE) AS GRP
 FROM FAITS
 GROUP BY ROLLUP (ANNEE, NOM_PAYS)
 ORDER BY NOM_PAYS;
 ```  
-Calcule la population totale sur 3 niveaux d'aggrégats différent : 
-  
+Calcule la population totale sur 3 niveaux d'aggrégats différent :
+
 -La population totale de chaque pays par année (2015 et 2016).  
-*Utile à des fins d'analyse démographiques pour chaque pays*  
-  
+*Utile à des fins d'analyse démographiques pour chaque pays*
+
 -La population totale répertoriée dans la base de donnée pour l'année 2015 et pour l'année 2016.  
-*Utile pour connaitre le % de la population mondiale répertoriée dans la base de donnée et utile à des fins statistiques sur les données des suicides* 
-  
+*Utile pour connaitre le % de la population mondiale répertoriée dans la base de donnée et utile à des fins statistiques sur les données des suicides*
+
 -La somme de la population totale des années 2015 et 2016.  
-*Utile à des fins statistiques sur les données des suicides*  
+*Utile à des fins statistiques sur les données des suicides*
 
 
 - Group By Rollup
@@ -65,7 +91,7 @@ WHERE FAITS.NOMP_PAYS = PAYS.NOM_PAYS
 GROUP BY ROLLUP(REGION, FAITS.NOM_PAYS);
 ```
 Ce calcul nous donne la moyenne sur 2015/2016 des taux de suicides par Pays puis par Région.
-Cela est utile pour 
+Cela est utile pour
 
 - Group By Cube
 ```sql
@@ -76,7 +102,7 @@ GROUP BY CUBE(BONHEUR.ANNEE, BONHEUR.NOM_PAYS);
 ```
 
 
-- Group By 
+- Group By
 ```sql
 SELECT CLASSEMENT_MONDIAL_BONHEUR, AVG(TAUX_SUICIDE) AS TX_SC, BONHEUR.NOM_PAYS, BONHEUR.ANNEE
 FROM BONHEUR, FAITS
@@ -109,7 +135,7 @@ FROM(
     )
 WHERE ROWNUM < 10
 ```
-ET SON OPPOSE 
+ET SON OPPOSE
 ```sql
 SELECT  * 
 FROM(
