@@ -27,8 +27,18 @@ Deux dimensions (PAYS et ECONOMIE) ainsi qu'une table des faits sont représent�
 **annee** (entier) : année concernée par les données.
 
 #### *liste des requêtes* ####
+- Group By
+```sql
+SELECT NOM_PAYS, SUM(NOMBRE_SUICIDE), SUM(POPULATION), AVG(TAUX_SUICIDE) as TX_SC 
+FROM FAITS
+GROUP BY NOM_PAYS
+ORDER BY TX_SC DESC;
+```
+Affiche les pays avec les taux de suicide (pour 100 000 habitants) les plus élevées en premier (pour 2015-2016).
+Cela donne un ordre de grandeur pour la suite des calculs.
 
-- Group By  
+
+- Group By Rollup 
 ```sql
 SELECT ANNEE, NOM_PAYS, SUM(POPULATION) AS POPULATION_TOTALE, GROUPING(ANNEE) AS GRP
 FROM FAITS
@@ -45,3 +55,77 @@ Calcule la population totale sur 3 niveaux d'aggrégats différent :
   
 -La somme de la population totale des années 2015 et 2016.  
 *Utile à des fins statistiques sur les données des suicides*  
+
+
+- Group By Rollup
+```sql
+SELECT FAITS.NOM_PAYS, REGION, AVG(TAUX_SUICIDE) AS AVG_SC
+FROM FAITS, PAYS
+WHERE FAITS.NOMP_PAYS = PAYS.NOM_PAYS
+GROUP BY ROLLUP(REGION, FAITS.NOM_PAYS);
+```
+Ce calcul nous donne la moyenne sur 2015/2016 des taux de suicides par Pays puis par Région.
+Cela est utile pour 
+
+- Group By Cube
+```sql
+SELECT AVG(NOTE_BONHEUR), AVG(TAUX_SUICIDE), BONHEUR.ANNEE, BONHEUR.NOM_PAYS
+FROM BONHEUR, FAITS
+WHERE BONHEUR.NOM_PAYS = FAITS.NOM_PAYS
+GROUP BY CUBE(BONHEUR.ANNEE, BONHEUR.NOM_PAYS);
+```
+
+
+- Group By 
+```sql
+SELECT CLASSEMENT_MONDIAL_BONHEUR, AVG(TAUX_SUICIDE) AS TX_SC, BONHEUR.NOM_PAYS, BONHEUR.ANNEE
+FROM BONHEUR, FAITS
+WHERE BONHEUR.NOM_PAYS = FAITS.NOM_PAYS
+GROUP BY BONHEUR.NOM_PAYS, CLASSEMENT_MONDIAL_BONHEUR, BONHEUR.ANNEE
+ORDER BY ANNEE, TX_SC;
+```
+
+- Ntile group by
+```sql
+SELECT RANK_IDH, AVG(TAUX_SUICIDE), AVG(IDH)
+FROM(
+    SELECT IDH, NTILE(4) OVER (ORDER BY IDH) RANK_IDH, TAUX_SUICIDE
+    FROM FAITS, ECONOMIE
+    WHERE FAITS.NOM_PAYS = ECONOMIE.NOM_PAYS
+    )
+GROUP BY RANK_IDH
+ORDER BY RANK_IDH
+```
+
+- TOP ( rownum)
+```sql
+SELECT  * 
+FROM(
+    SELECT BONHEUR.NOM_PAYS, AVG(NOTE_BONHEUR) AS AVG_BON, AVG(TAUX_SUICIDE)
+    FROM BONHEUR, FAITS
+    WHERE BONHEUR.NOM_PAYS = FAITS.NOM_PAYS
+    GROUP BY BONHEUR.NOM_PAYS
+    ORDER BY AVG_BON
+    )
+WHERE ROWNUM < 10
+```
+ET SON OPPOSE 
+```sql
+SELECT  * 
+FROM(
+    SELECT BONHEUR.NOM_PAYS, AVG(NOTE_BONHEUR) AS AVG_BON, AVG(TAUX_SUICIDE)
+    FROM BONHEUR, FAITS
+    WHERE BONHEUR.NOM_PAYS = FAITS.NOM_PAYS
+    GROUP BY BONHEUR.NOM_PAYS
+    ORDER BY AVG_BON DESC
+    )
+WHERE ROWNUM < 10
+```
+- Group by
+
+```sql
+SELECT TRANCHE_AGE, AVG(TAUX_SUICIDE), ANNEE
+FROM FAITS
+GROUP BY (TRANCHE_AGE, ANNEE)
+ORDER BY TRANCHE_AGE, ANNEE
+```
