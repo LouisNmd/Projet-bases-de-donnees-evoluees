@@ -108,6 +108,7 @@ FROM BONHEUR, FAITS
 WHERE BONHEUR.NOM_PAYS = FAITS.NOM_PAYS
 GROUP BY CUBE(BONHEUR.ANNEE, BONHEUR.NOM_PAYS);
 ```
+La moyenne de la note de bonheur et la moyenne du taux de suicide selon 3 aggrégats (pour toute les tranches d'age) : par annee et par pays, par pays (donc sur 2 ans) et par annee (donc pour tout les pays sur une annee) ainsi que les données de base de la table
 
 
 - Group By
@@ -118,6 +119,7 @@ WHERE BONHEUR.NOM_PAYS = FAITS.NOM_PAYS
 GROUP BY BONHEUR.NOM_PAYS, CLASSEMENT_MONDIAL_BONHEUR, BONHEUR.ANNEE
 ORDER BY ANNEE, TX_SC;
 ```
+La moyenne du taux de suicide de toute les tranches d'age de chaque pays, ordonnée par année puis par nom de pays (permet de voir s'il y a une corrélation entre le bonheur et le taux de suicide)
 
 - Ntile group by
 ```sql
@@ -130,6 +132,7 @@ FROM(
 GROUP BY RANK_IDH
 ORDER BY RANK_IDH
 ```
+On découpe les pays en 4 ensemble de même taille (selon l'IDH) puis on calcul la moyenne du taux de suicide pour chaque ensemble de pays. retourne le résultat ordonnée par IDH
 
 - TOP ( rownum)
 ```sql
@@ -143,6 +146,8 @@ FROM(
     )
 WHERE ROWNUM < 10
 ```
+Affiche le top 10 des pays dont la moyenne de la note de bonheur sur les années 2015 et 2016 est la plus haute
+
 ET SON OPPOSE
 ```sql
 SELECT  * 
@@ -155,6 +160,7 @@ FROM(
     )
 WHERE ROWNUM < 10
 ```
+l'inverse (genre top 10 des pays de dépressifs sur les 2 années t'as vu)
 - Group by
 
 ```sql
@@ -163,3 +169,4 @@ FROM FAITS
 GROUP BY (TRANCHE_AGE, ANNEE)
 ORDER BY TRANCHE_AGE, ANNEE
 ```
+taux de suicide par tranche d'age (pour tout les pays confondus) pour les années 2015 et 2016, ordonnée par tranche d'age puis par pays
