@@ -4,7 +4,7 @@
 #### *Introduction* ####
 Pour réaliser cette entrepôt de données nous avons parcouru différents site de Dataset notamment **Kaggle** où nous avons choisi comme sujet **“L’Etude du bien-être dans le monde en 2015 et 2016”** après avoir trouvé la base de données donnant accès à différentes informations à propos des suicides en 2015-2016 par pays et nous voulions analyser si une corrélation pouvait être trouvée entre le nombre et taux de suicide et le niveau économique des pays du monde en 2015-2016. Une analyse qui pourrait être faite par des étudiants ou des chercheurs en sciences sociales.
 
-### *Processus d'entreprise et grain de processus de l'entrepôt* ###
+#### *Processus d'entreprise et grain de processus de l'entrepôt* ####
 L’entrepôt de données que nous avons réalisé à pour but d’analyser les liens potentiels entre le bonheur de la population par pays et le taux de suicide et l’économie des pays en 2015 et 2016.
 Pour cela nous avons utilisé des base de données qui concernent dans un premier temps le taux de suicide dans les pays ainsi qu’une autre base de données fournissant des informations sur le bonheur des gens dans les pays du monde et enfin une dernière base qui nous donne le pib (produit intérieur brut) et l’ idh (indice de développement humain) pour chaque pays.
 
