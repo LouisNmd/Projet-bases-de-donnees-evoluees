@@ -3,7 +3,7 @@
 
 #### *Schéma en étoile de l'entrepôt de données* ####
 
-![Schéma en flocon](flocon.jpg)
+![Schéma en flocon](flocon.png)
 
 Deux dimensions (PAYS et ECONOMIE) ainsi qu'une table des faits sont représentées dans ce schéma.  
 
