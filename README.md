@@ -8,11 +8,11 @@ L'entrepôt repose sur le schéma en étoile présenté ci-dessus : il est néce
 
 - <u>Sources</u>
   - [1] https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016  
-    Ensemble de données qui regroupe des statistiques sur les suicides par pays, ainsi que les données économiques (PIB par habitant et IDH) de ces pays.
+    Ensemble de données qui regroupe des statistiques sur les suicides par pays, ainsi que les données économiques (PIB par habitant et IDH) de ces pays.  
     *master.csv*
 
   - [2] https://www.kaggle.com/unsdsn/world-happiness  
-    Ensemble de données qui regroupent des statistiques sur le bonheur des pays.
+    Ensemble de données qui regroupent des statistiques sur le bonheur des pays.  
     *2015.csv et 2016.csv*
 
 - <u>Intégration & nettoyage des données</u>  
