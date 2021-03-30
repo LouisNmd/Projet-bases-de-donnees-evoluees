@@ -1,0 +1,69 @@
+NOM_PAYS                                 REGION                                   AVG_SC                 
+---------------------------------------- ---------------------------------------- ---------------------- 
+Japan                                    Eastern Asia                             17,17                  
+Mongolia                                 Eastern Asia                             18,439                 
+                                         Eastern Asia                             17,74681818181818181818181818181818181818 
+United States                            North America                            14,6175                
+                                         North America                            14,6175                
+Italy                                    Western Europe                           6,5375                 
+Malta                                    Western Europe                           6,5225                 
+Spain                                    Western Europe                           8,115                  
+Cyprus                                   Western Europe                           4,39727272727272727272727272727272727273 
+Greece                                   Western Europe                           4,67166666666666666666666666666666666667 
+Norway                                   Western Europe                           11,36916666666666666666666666666666666667 
+Sweden                                   Western Europe                           13,09727272727272727272727272727272727273 
+Austria                                  Western Europe                           17,175                 
+Belgium                                  Western Europe                           16,38833333333333333333333333333333333333 
+Denmark                                  Western Europe                           10,11833333333333333333333333333333333333 
+Finland                                  Western Europe                           13,4325                
+Germany                                  Western Europe                           12,52833333333333333333333333333333333333 
+Iceland                                  Western Europe                           12,66909090909090909090909090909090909091 
+Luxembourg                               Western Europe                           11,2                   
+Netherlands                              Western Europe                           11,56                  
+Switzerland                              Western Europe                           13,72166666666666666666666666666666666667 
+United Kingdom                           Western Europe                           7,22833333333333333333333333333333333333 
+                                         Western Europe                           10,85736220472440944881889763779527559055 
+Thailand                                 Southeastern Asia                        7,20318181818181818181818181818181818182 
+Singapore                                Southeastern Asia                        9,1075                 
+                                         Southeastern Asia                        7,87529411764705882352941176470588235294 
+Mauritius                                Sub-Saharan Africa                       9,05772727272727272727272727272727272727 
+South Africa                             Sub-Saharan Africa                       1,08333333333333333333333333333333333333 
+                                         Sub-Saharan Africa                       6,24323529411764705882352941176470588235 
+Australia                                Australia and New Zealand                12,84833333333333333333333333333333333333 
+                                         Australia and New Zealand                12,84833333333333333333333333333333333333 
+Latvia                                   Central and Eastern Europe               20,95583333333333333333333333333333333333 
+Poland                                   Central and Eastern Europe               13,91583333333333333333333333333333333333 
+Serbia                                   Central and Eastern Europe               17,16416666666666666666666666666666666667 
+Armenia                                  Central and Eastern Europe               3,90181818181818181818181818181818181818 
+Croatia                                  Central and Eastern Europe               20,14727272727272727272727272727272727273 
+Estonia                                  Central and Eastern Europe               17,115                 
+Georgia                                  Central and Eastern Europe               7,05666666666666666666666666666666666667 
+Hungary                                  Central and Eastern Europe               22,66409090909090909090909090909090909091 
+Romania                                  Central and Eastern Europe               11,35818181818181818181818181818181818182 
+Ukraine                                  Central and Eastern Europe               20,39333333333333333333333333333333333333 
+Slovenia                                 Central and Eastern Europe               22,0675                
+Lithuania                                Central and Eastern Europe               33,96363636363636363636363636363636363636 
+Kazakhstan                               Central and Eastern Europe               19,835                 
+Kyrgyzstan                               Central and Eastern Europe               8,1975                 
+Turkmenistan                             Central and Eastern Europe               2,37333333333333333333333333333333333333 
+Czech Republic                           Central and Eastern Europe               15,11954545454545454545454545454545454545 
+                                         Central and Eastern Europe               16,45353174603174603174603174603174603175 
+Chile                                    Latin America and Caribbean              12,30666666666666666666666666666666666667 
+Brazil                                   Latin America and Caribbean              6,45416666666666666666666666666666666667 
+Mexico                                   Latin America and Caribbean              5,5475                 
+Panama                                   Latin America and Caribbean              3,74166666666666666666666666666666666667 
+Ecuador                                  Latin America and Caribbean              8,11583333333333333333333333333333333333 
+Uruguay                                  Latin America and Caribbean              22,50166666666666666666666666666666666667 
+Colombia                                 Latin America and Caribbean              5,86666666666666666666666666666666666667 
+Argentina                                Latin America and Caribbean              9,34416666666666666666666666666666666667 
+Guatemala                                Latin America and Caribbean              3,7375                 
+Nicaragua                                Latin America and Caribbean              5,8225                 
+                                         Latin America and Caribbean              8,34383333333333333333333333333333333333 
+Qatar                                    Middle East and Northern Africa          1,60318181818181818181818181818181818182 
+Israel                                   Middle East and Northern Africa          5,4925                 
+Turkey                                   Middle East and Northern Africa          2,3725                 
+                                         Middle East and Northern Africa          2,81847826086956521739130434782608695652 
+                                                                                  11,74938931297709923664122137404580152672 
+
+ 64 lignes sélectionnées 
+

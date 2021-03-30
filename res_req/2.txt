@@ -1,0 +1,86 @@
+ANNEE                  NOM_PAYS                                 POP                    GRP                    
+---------------------- ---------------------------------------- ---------------------- ---------------------- 
+2015                   Antigua and Barbuda                      91889                  0                      
+2015                   Argentina                                39699624               0                      
+2015                   Armenia                                  2795335                0                      
+2016                   Armenia                                  2400033                0                      
+2015                   Australia                                22240785               0                      
+2016                   Austria                                  7484629                0                      
+2015                   Austria                                  8219386                0                      
+2015                   Belgium                                  10624356               0                      
+2015                   Belize                                   319835                 0                      
+2015                   Brazil                                   191087085              0                      
+2015                   Chile                                    16565725               0                      
+2015                   Colombia                                 44490427               0                      
+2016                   Croatia                                  3567043                0                      
+2015                   Croatia                                  4001669                0                      
+2015                   Cuba                                     10832068               0                      
+2016                   Cyprus                                   711344                 0                      
+2015                   Cyprus                                   796037                 0                      
+2016                   Czech Republic                           8929942                0                      
+2015                   Czech Republic                           9989325                0                      
+2015                   Denmark                                  5383060                0                      
+2015                   Ecuador                                  14534024               0                      
+2015                   Estonia                                  1243450                0                      
+2015                   Finland                                  5181797                0                      
+2015                   Georgia                                  3458400                0                      
+2015                   Germany                                  78136683               0                      
+2015                   Greece                                   10331286               0                      
+2015                   Grenada                                  96892                  0                      
+2016                   Grenada                                  79012                  0                      
+2015                   Guatemala                                14258397               0                      
+2016                   Hungary                                  8390370                0                      
+2015                   Hungary                                  9389519                0                      
+2015                   Iceland                                  308554                 0                      
+2016                   Iceland                                  268773                 0                      
+2015                   Israel                                   7516180                0                      
+2015                   Italy                                    58117697               0                      
+2015                   Japan                                    120376310              0                      
+2015                   Kazakhstan                               15646752               0                      
+2015                   Kyrgyzstan                               5195827                0                      
+2015                   Latvia                                   1875522                0                      
+2015                   Lithuania                                2753926                0                      
+2016                   Lithuania                                2445296                0                      
+2015                   Luxembourg                               537748                 0                      
+2015                   Malta                                    410637                 0                      
+2016                   Mauritius                                992432                 0                      
+2015                   Mauritius                                1154848                0                      
+2015                   Mexico                                   114357884              0                      
+2016                   Mongolia                                 2167589                0                      
+2016                   Netherlands                              14239554               0                      
+2015                   Netherlands                              16057342               0                      
+2015                   Nicaragua                                5476483                0                      
+2015                   Norway                                   4882909                0                      
+2015                   Panama                                   3583382                0                      
+2015                   Poland                                   36086575               0                      
+2015                   Puerto Rico                              3469521                0                      
+2015                   Qatar                                    2354147                0                      
+2016                   Qatar                                    2213121                0                      
+2015                   Republic of Korea                        48671752               0                      
+2015                   Romania                                  18863927               0                      
+2016                   Romania                                  16644905               0                      
+2015                   Russian Federation                       137018943              0                      
+2015                   Saint Vincent and Grenadines             100948                 0                      
+2015                   Serbia                                   6766406                0                      
+2015                   Seychelles                               85949                  0                      
+2015                   Singapore                                3719115                0                      
+2015                   Slovenia                                 1954632                0                      
+2015                   South Africa                             49627460               0                      
+2015                   Spain                                    44186528               0                      
+2015                   Sweden                                   9114524                0                      
+2016                   Sweden                                   8125852                0                      
+2015                   Switzerland                              7892502                0                      
+2015                   Thailand                                 61261276               0                      
+2016                   Thailand                                 53442001               0                      
+2015                   Turkey                                   71880464               0                      
+2015                   Turkmenistan                             4886514                0                      
+2015                   Ukraine                                  40345446               0                      
+2015                   United Kingdom                           61082942               0                      
+2015                   United States                            300078511              0                      
+2015                   Uruguay                                  3190795                0                      
+2015                                                            1774657932             0                      
+                                                                1906759828             1                      
+2016                                                            132101896              0                      
+
+ 81 lignes sélectionnées 
+
